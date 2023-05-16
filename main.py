@@ -4,11 +4,11 @@ import pandas
 counter = 0
 screen = turtle.Screen()
 screen.title("US STATES GAMES")
-image = "D:/100python/day15to25/us-states-game-start/blank_states_img.gif"
+image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-us_data = pandas.read_csv("D:/100python/day15to25/us-states-game-start/50_states.csv")
+us_data = pandas.read_csv("50_states.csv")
 state_names = us_data['state']
 state_names = state_names.tolist()
 
@@ -47,4 +47,4 @@ missed_states = [st for st in state_names if st not in already_answered]
 
 
 df = pandas.DataFrame({"States" : missed_states})
-df.to_csv("D:/100python/day15to25/us-states-game-start/states_to_learn.csv")
+df.to_csv("states_to_learn.csv")
